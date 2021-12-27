@@ -1,0 +1,23 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "Stop It",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["Content.js"]
+    }
+  ],
+  "icons": { "48": "logo48.png", "128": "logo128.png" },
+  "browser_action": {
+    "default_popup": "Popup.html",
+    "default_title": "Procrastination Blocker"
+  },
+  "permissions": [
+    "https://www.youtube.com/*",
+    "https://www.facebook.com/*",
+    "https://www.netflix.com/*"
+  ]
+}
